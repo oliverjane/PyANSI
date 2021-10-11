@@ -9,6 +9,11 @@ Windows users may also need to 'initialise' the terminal for ANSI support using
 import subprocess
 subprocess.call("", shell=True)
 ```
+## Install
+Install using pip:
+```
+pip instally PyANSI
+```
 ## Examples
 ### Colour
 True colour
