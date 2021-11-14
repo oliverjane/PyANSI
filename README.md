@@ -3,12 +3,7 @@ PyANSI provides an easy way to use ANSI escape codes to control the colour and c
 ## System Requirements
 PyANSI is primarily intended for Unix-like operating systems but will run on any operating system which supports ANSI escape codes.
 
-Note: Windows users may need to enable support for ANSI escape codes if using Command Prompt or PowerShell. To do this, open registry editor and navigate to `HKEY_CURRENT_USER\Console\` Create a DWORD entry called `VirtualTerminalLevel` with a value of 1. 
-Windows users may also need to 'initialise' the terminal for ANSI support using
-```python
-import subprocess
-subprocess.call("", shell=True)
-```
+Note: Windows users may need to initialise the console using `PyANSI.windows.init()`
 ## Install
 Install using pip:
 ```
@@ -16,12 +11,13 @@ pip instally PyANSI
 ```
 ## Examples
 ### Colour
-True colour
+Note: The `colours` and `colors` submodules are functionally identical but the `colors` submodule uses the American spelling of color instead of colour.
+#### True Colour
 ```python
 from PyANSI import colours
 colours.printHex("Hello, World!", foreHex="#00AEFF", backHex="#FF5500")
 ```
-ANSI 256 colour mode
+#### ANSI 256 Colour Mode
 ```python
 from PyANSI import colours
 colours.print256("Hello, World!", foreColour=32, backColour=172)
