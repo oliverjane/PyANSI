@@ -16,7 +16,8 @@
 
 import ctypes, platform
 def init():
-    if platform.system == "Windows":
+    """Initialise the windows console"""
+    if platform.system() == "Windows":
         kernel32 = ctypes.windll.kernel32
         console = kernel32.GetStdHandle(-11)
         kernel32.SetConsoleMode(console, 7)

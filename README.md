@@ -7,7 +7,7 @@ Note: Windows users may need to initialise the console using `PyANSI.windows.ini
 ## Install
 Install using pip:
 ```
-pip instally PyANSI
+pip install PyANSI
 ```
 ## Examples
 ### Colour
